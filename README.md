@@ -31,10 +31,6 @@ This project implements a **data warehouse** to store and analyze business data 
 
 ## 🏁 Setup & Installation
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/data-warehouse-project.git
-   cd data-warehouse-project
-   ```
 2. In the third file, change the location of all bulk insert statements to the directory where you decide to keep the datasets.
 4. Load CSV files into the SQL Server database.
 5. Execute the provided SQL scripts in numerical order to transform and load data.
