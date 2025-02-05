@@ -1,7 +1,7 @@
 # Data Warehouse Project
 
 ## 📌 Project Overview
-This project implements a **data warehouse** to store and analyze business data efficiently. It includes an **ETL (Extract, Transform, Load) pipeline** to ingest and process data from two CSV files and provides analytical insights using SQL Server.
+This project implements a **data warehouse** to store and analyze business data efficiently. It includes an **ETL (Extract, Transform, Load) pipeline** to ingest and process data from two CSV files and provides views in the gold layer that are suitable for analysis.
 
 ## 🎯 Objectives
 - **Centralized Data Storage**: Store structured data in a well-defined schema.
@@ -11,24 +11,23 @@ This project implements a **data warehouse** to store and analyze business data 
 
 ## 🏗️ Architecture
 ```
-+------------------+        +-------------------+        +----------------+
-| Data Sources     | -----> | ETL Pipeline      | -----> | Data Warehouse |
-| (CSV Files)      |        | (SQL Scripts)     |        | (SQL Server)   |
-+------------------+        +-------------------+        +----------------+
++------------------+        +-------------------+        +------------------+
+| Data Sources     | -----> | ETL Pipeline      | -----> | Gold Layer views |
+| (CSV Files)      |        | (SQL Scripts)     |        | (SQL Server)     |
++------------------+        +-------------------+        +------------------+
 ```
 
 ## 🛠️ Tech Stack
 - **Data Warehouse**: SQL Server
 - **ETL**: SQL Scripts (Stored Procedures, SSIS optional) ????????
 - **Data Storage**: CSV Files
-- **Analytics**: SQL Queries, SSMS (SQL Server Management Studio)
+- **Analytics**: SQL Views, SSMS (SQL Server Management Studio)
 
 ## 🚀 Features
 ✅ **Automated ETL Pipeline**: Extracts data from CSV files into SQL Server.
 ✅ **Data Transformation**: Cleans and structures data using SQL queries.
 ✅ **Batch Processing**: Loads and updates data efficiently.
-✅ **Business Intelligence Integration**: Compatible with Power BI or Excel.
-✅ **Optimized Query Performance**: Indexing and tuning for efficiency.
+
 
 ## 🏁 Setup & Installation
 1. Clone the repository:
@@ -36,9 +35,10 @@ This project implements a **data warehouse** to store and analyze business data 
    git clone https://github.com/yourusername/data-warehouse-project.git
    cd data-warehouse-project
    ```
-2. Load CSV files into the SQL Server database.
-3. Execute the provided SQL scripts to transform and load data.
-4. Query the warehouse using SQL Server Management Studio (SSMS).
+2. In the third file, change the location of all bulk insert statements to the directory where you decide to keep the datasets.
+4. Load CSV files into the SQL Server database.
+5. Execute the provided SQL scripts in numerical order to transform and load data.
+
 
 ## 📜 License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
