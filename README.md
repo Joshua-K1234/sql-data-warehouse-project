@@ -3,22 +3,14 @@
 ## 📌 Project Overview
 This project implements a **data warehouse** to store and analyze business data efficiently. It includes an **ETL (Extract, Transform, Load) pipeline** to ingest and process data from two CSV files and provides views in the gold layer that are suitable for analysis.
 
+## 🏗️ Architecture
 <img src="https://github.com/Joshua-K1234/sql-data-warehouse-project/blob/main/images/Diagram.drawio" alt="Components diagram" width="(200/9)16" height="200"/>
-
 
 ## 🎯 Objectives
 - **Centralized Data Storage**: Store structured data in a well-defined schema.
 - **ETL Pipeline**: Automate data extraction, transformation, and loading from CSV sources.
 - **Analytics & Reporting**: Enable business users to run SQL queries and generate insights.
 - **Scalability**: Optimize performance within SQL Server.
-
-## 🏗️ Architecture
-```
-+------------------+        +-------------------+        +------------------+
-| Data Sources     | -----> | ETL Pipeline      | -----> | Gold Layer views |
-| (CSV Files)      |        | (SQL Scripts)     |        | (SQL Server)     |
-+------------------+        +-------------------+        +------------------+
-```
 
 ## 🛠️ Tech Stack
 - **Data Warehouse**: SQL Server
