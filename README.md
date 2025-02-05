@@ -3,7 +3,7 @@
 ## 📌 Project Overview
 This project implements a **data warehouse** to store and analyze business data efficiently. It includes an **ETL (Extract, Transform, Load) pipeline** to ingest and process data from two CSV files and provides views in the gold layer that are suitable for analysis.
 
-<img src="https://github.com/Joshua-K1234/sales-end-to-end-project/blob/main/images/cloud%20project%20components.JPG" alt="Components diagram" width="(200/9)16" height="200"/>
+<img src="https://github.com/Joshua-K1234/sql-data-warehouse-project/blob/main/images/Diagram.drawio" alt="Components diagram" width="(200/9)16" height="200"/>
 
 
 ## 🎯 Objectives
