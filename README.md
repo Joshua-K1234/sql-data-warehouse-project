@@ -14,7 +14,7 @@ This project implements a **data warehouse** to store and analyze business data 
 
 ## 🛠️ Tech Stack
 - **Data Warehouse**: SQL Server
-- **ETL**: SQL Scripts (Stored Procedures, SSIS optional) ????????
+- **ETL**: SQL Scripts (Stored Procedures)
 - **Data Storage**: CSV Files
 - **Analytics**: SQL Views, SSMS (SQL Server Management Studio)
 
