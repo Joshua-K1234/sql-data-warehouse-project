@@ -1,6 +1,20 @@
+/*
+===============================================================================
+DDL Script: Create Bronze Tables
+===============================================================================
+Script Purpose:
+    This script creates tables in the 'bronze' schema, dropping existing tables 
+    if they already exist.
+	Run this script to re-define the DDL structure of 'bronze' Tables
+    A table is made for each of the 6 csv files in datasets.
+===============================================================================
+*/
+
 USE DataWarehouse;
 GO
 
+-- Drop all existing old tables.
+    
 IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL DROP TABLE bronze.crm_cust_info;
 IF OBJECT_ID('bronze.crm_prd_info', 'U') IS NOT NULL DROP TABLE bronze.crm_prd_info;
 IF OBJECT_ID('bronze.crm_sales_details', 'U') IS NOT NULL DROP TABLE bronze.crm_sales_details;
@@ -9,6 +23,8 @@ IF OBJECT_ID('bronze.erp_loc_a101', 'U') IS NOT NULL DROP TABLE bronze.erp_loc_a
 IF OBJECT_ID('bronze.erp_px_cat_g1v2', 'U') IS NOT NULL DROP TABLE bronze.erp_px_cat_g1v2;
 GO
 
+-- Make all the new tables.
+    
 CREATE TABLE bronze.crm_cust_info (
     cst_id INT,
     cst_key VARCHAR(50),
@@ -44,7 +60,6 @@ CREATE TABLE bronze.crm_sales_details (
 );
 GO
 
--- customer demographics
 CREATE TABLE bronze.erp_cust_az12 (
     cid VARCHAR(50),
     bdate DATE,
