@@ -1,10 +1,27 @@
 USE DataWarehouse;
 GO
+/*
+===============================================================================
+Stored Procedure: Load Bronze Layer (Source -> Bronze)
+===============================================================================
+Script Purpose:
+    This stored procedure loads data into the 'bronze' schema from external CSV files. 
+    It performs the following actions:
+    - Truncates the bronze tables before loading data (So its empty prior).
+    - Uses the `BULK INSERT` command to load data from csv Files to bronze tables.
+    - Output duration taking to complete the procedure.
 
+Parameters:
+    None. 
+    This stored procedure does not accept any parameters or return any values.
+
+-- Uncomment the line below to run the procedure
 -- EXEC bronze.load_bronze
 
--- Use: EXEC bronze.load_bronze
--- To run the procedure.
+-- Use: "EXEC bronze.load_bronze"
+===============================================================================
+*/
+
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
 	DECLARE @start_time DATETIME, @end_time DATETIME;
@@ -116,11 +133,10 @@ BEGIN
 		PRINT '==============================';
 		PRINT 'ERROR OCCURED DURING LOADING BRONZE LAYER PROCEDURE';
 		PRINT 'ERROR MESSAGE: ' + ERROR_MESSAGE();
-        PRINT 'ERROR NUMBER: ' + CAST(ERROR_NUMBER() AS VARCHAR(10));
-        PRINT 'ERROR SEVERITY: ' + CAST(ERROR_SEVERITY() AS VARCHAR(10));
-        PRINT 'ERROR STATE: ' + CAST(ERROR_STATE() AS VARCHAR(10));
+        	PRINT 'ERROR NUMBER: ' + CAST(ERROR_NUMBER() AS VARCHAR(10));
+        	PRINT 'ERROR SEVERITY: ' + CAST(ERROR_SEVERITY() AS VARCHAR(10));
+        	PRINT 'ERROR STATE: ' + CAST(ERROR_STATE() AS VARCHAR(10));
 		PRINT '==============================';
-
 	END CATCH
 
 END
