@@ -7,7 +7,8 @@ This project implements a **data warehouse** to store business data efficiently 
 <img src="https://github.com/Joshua-K1234/sql-data-warehouse-project/blob/main/images/Diagram.png" alt="Components diagram" width="(600/9)16" height="600"/>
 
 ## What does the project do? Why?
-This project takes in 6 csv files related to products, sales and customers and processes them so that they are ready for analyis
+This project takes in 6 csv files related to products, sales and customers and processes them so that they are ready for analyis.
+
 
 ## 🎯 Objectives
 - **Centralized Data Storage**: Store structured data in a well-defined schema.
