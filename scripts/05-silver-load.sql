@@ -142,7 +142,7 @@ BEGIN
 		-- Standardize sales order date: set to NULL if 0 or not 8 digits, else convert to DATE
 		-- Standardize shipping date with same logic
 		-- Standardize due date with same logic
-		-- Recalculate sales value if it's missing, non-positive, or inconsistent with quantity × price
+		-- Recalculate sales value if it's missing, non-positive, or inconsistent with quantity Ã— price
 		-- Include quantity as-is
 		-- Recalculate price if it's missing or non-positive by dividing sales by quantity
 
