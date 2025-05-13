@@ -5,8 +5,10 @@
 - Business Problem: A company needs to consolidate sales data from multiple files. It would like a modern data warehouse to store the data, the data needs to be cleaned and transformed so it is ready for analysis.
 
 - How I plan on Solving the Problem: I will build a datawarehouse in SQL server. It will:
-  - Import sales data from the sources
-  - Cleanse data and solve data issues prior analysis.
+  - Import sales data: Load Sales, Product and Customer data into the data warehouse
+  - Data Cleansing: Cleanse data and solve data issues prior to analysis
+  - Clear documentation: All the SQL Scripts will have header comments describing purpose and functionality.
+  - Build-in Error Handling & Logging: SQL Scrips include try and catch blocks that print error messages, success confirmations and execution time.
 
 ## 🏗️ Architecture
 <img src="https://github.com/Joshua-K1234/sql-data-warehouse-project/blob/main/images/Diagram.png" alt="Components diagram" width="(600/9)16" height="600"/>
