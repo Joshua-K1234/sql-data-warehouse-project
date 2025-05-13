@@ -26,7 +26,7 @@ These images are for the 3rd script followed by the 5th script.
 
 <img src="https://github.com/Joshua-K1234/sql-data-warehouse-project/blob/main/images/Bronze%20Layer%20Load.JPG" width="(600/9)16" height="600"/>
 
-<img src="https://github.com/Joshua-K1234/sql-data-warehouse-project/blob/main/images/Silver%20Layer%20Load.JPG" width="(600/9)16" height="600"/>
+<img src="https://github.com/Joshua-K1234/sql-data-warehouse-project/blob/main/images/Silver%20Layer%20Load.JPG" width="(400/9)16" height="400"/>
 
 
 ## Conclusion
