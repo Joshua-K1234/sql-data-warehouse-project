@@ -15,6 +15,12 @@
 
 ## Explanation of the SQL Scripts used to solve the problem
 
+1 - The first script creates a database called "DataWarehouse", if it exists already the old database is deleted. It additionally creates the bronze, silver and gold schema's for the medallion architecture.
+2 - The second script creates tables in the bronze schema for each csv file. It drops existing old tables.
+3 - The third script is a stored procedure. It includes error handling & logging & outputs execution time. It first of all truncates all the tables in the bronze layer. Next it loads all the tables using "BULK INSERT" to populate the tables.
+<img src="https://github.com/Joshua-K1234/sql-data-warehouse-project/blob/main/images/Diagram.png" alt="Components diagram" width="(600/9)16" height="600"/>
+
+
 ## Conclusion
 
 ## 🚀 Key Features
