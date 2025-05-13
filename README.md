@@ -18,8 +18,15 @@
 1) The first script creates a database called "DataWarehouse", if it exists already the old database is deleted. It additionally creates the bronze, silver and gold schema's for the medallion architecture.
 2) The second script creates tables in the bronze schema for each csv file. It drops existing old tables.
 3) The third script is a stored procedure. It includes error handling & logging & outputs execution time. It first of all truncates all the tables in the bronze layer. Next it loads all the tables using "BULK INSERT" to populate the tables.
+4) The fourth script creates tables in the silver schema for each csv file. This done again so we have copy of both the raw data and the transformed data that we are creating in the silver layer.
+5) The fifth script is a stored procedure. It includes error handling & logging & outputs execution time. It first of all truncates all the tables in the silver layer. Next loads data from the bronze layer but this time the data is transformed, the data is transformed in various ways including: Trimming, Standarisation, Extracting characters and much more.  
+6) The sixth script creates views ready for analysis, it combines data from various silver tables as shown in the architecture.
+
+These images are for the 3rd script followed by the 5th script.
 
 <img src="https://github.com/Joshua-K1234/sql-data-warehouse-project/blob/main/images/Bronze%20Layer%20Load.JPG" width="(600/9)16" height="600"/>
+
+<img src="https://github.com/Joshua-K1234/sql-data-warehouse-project/blob/main/images/Silver%20Layer%20Load.JPG" width="(600/9)16" height="600"/>
 
 
 ## Conclusion
