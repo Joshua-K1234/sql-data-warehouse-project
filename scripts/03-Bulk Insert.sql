@@ -15,12 +15,13 @@ Parameters:
     None. 
     This stored procedure does not accept any parameters or return any values.
 
--- Uncomment the line below to run the procedure
--- EXEC bronze.load_bronze
-
--- Use: "EXEC bronze.load_bronze"
+-- Use: "EXEC bronze.load_bronze" in a new query tab.
+-- First run this query so the procedure is created.
+-- Next create a new query tab and run the EXEC command
+-- Ensure in the new tab that the "DataWarehouse" database is selected
 ===============================================================================
 */
+
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN

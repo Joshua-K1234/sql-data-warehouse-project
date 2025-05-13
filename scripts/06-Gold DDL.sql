@@ -26,6 +26,14 @@ GO
 
 -- Create Views (3)
 
+-- Create a view in the gold layer to define the customer dimension table
+-- Add a surrogate key using ROW_NUMBER for internal use
+-- Include customer ID, number, name, marital status, and create date from the CRM source
+-- Add country information by joining with ERP location data
+-- Use gender from CRM where possible, otherwise fallback to ERP gender
+-- Include birthdate from ERP data
+
+
 CREATE VIEW gold.dim_customers AS
 SELECT
     ROW_NUMBER() OVER (ORDER BY cst_id) AS customer_key, -- Surrogate key
@@ -48,6 +56,16 @@ LEFT JOIN silver.erp_loc_a101 la
     ON ci.cst_key = la.cid;
 GO
 
+-- Create a product dimension view in the gold layer.
+-- This view:
+-- - Generates a surrogate key using ROW_NUMBER ordered by product start date and product key.
+-- - Selects product identifiers, name, and cleaned keys from the CRM data.
+-- - Includes category details (name, subcategory, maintenance) from the ERP category lookup table.
+-- - Includes cost and normalized product line information from CRM.
+-- - Includes the product start date.
+-- - Joins the CRM product data with the ERP category table using category ID.
+-- - Filters out historical records by excluding rows with a non-null prd_end_dt.
+
 CREATE VIEW gold.dim_products AS
 SELECT
     ROW_NUMBER() OVER (ORDER BY pn.prd_start_dt, pn.prd_key) AS product_key, -- Surrogate key
@@ -66,6 +84,14 @@ LEFT JOIN silver.erp_px_cat_g1v2 pc
     ON pn.cat_id = pc.id
 WHERE pn.prd_end_dt IS NULL; -- Filter out all historical data
 GO
+
+-- Create a sales fact view in the gold layer.
+-- This view:
+-- - Selects cleaned and enriched sales transaction data from the CRM source.
+-- - Includes order number, dates, quantities, and financials.
+-- - Joins to the product dimension to bring in the product surrogate key.
+-- - Joins to the customer dimension to bring in the customer surrogate key.
+-- - Ensures all joins are LEFT JOINs to retain unmatched sales records if needed.
 
 CREATE VIEW gold.fact_sales AS
 SELECT
