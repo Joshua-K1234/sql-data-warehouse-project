@@ -9,12 +9,13 @@ This project implements a **data warehouse** to store business data efficiently 
 ## What does the project do? Why?
 This project takes in 6 csv files related to products, sales and customers and processes them so that they are ready for analyis.
 
+## 🚀 Key Features
+- Centralized Data Storage: Combines product, sales, and customer data into a unified schema.
+- Automated ETL Pipeline: Extracts, transforms, and loads data from CSVs using stored procedures.
+- Clean, Structured Data: Ensures consistency and reliability for analysis.
+- SQL Views for Analysis: Provides a foundation for insights and reporting.
+- Scalable Performance: Designed for efficient querying and batch updates.
 
-## 🎯 Objectives
-- **Centralized Data Storage**: Store structured data in a well-defined schema.
-- **ETL Pipeline**: Automate data extraction, transformation, and loading from CSV sources.
-- **Analytics & Reporting**: Enable business users to run SQL queries and generate insights.
-- **Scalability**: Optimize performance within SQL Server.
 
 ## 🛠️ Tech Stack
 - **Data Warehouse**: SQL Server
@@ -22,17 +23,12 @@ This project takes in 6 csv files related to products, sales and customers and p
 - **Data Storage**: CSV Files
 - **Analytics**: SQL Views, SSMS (SQL Server Management Studio)
 
-## 🚀 Features
-✅ **Automated ETL Pipeline**: Extracts data from CSV files into SQL Server.
-✅ **Data Transformation**: Cleans and structures data using SQL queries.
-✅ **Batch Processing**: Loads and updates data efficiently.
 
 
 ## 🏁 Setup & Installation
 1. Clone the repository:
 2. In the third file "bronze-load.sql" , change the location of all bulk insert statements to the directory where you decide to keep the datasets.
-4. Load CSV files into the SQL Server database.
-5. Execute the provided SQL scripts in numerical order to transform and load data.
+3. Execute the provided SQL scripts in numerical order to transform and load data.
 
 
 ## 📜 License
