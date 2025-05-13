@@ -30,7 +30,7 @@ This project takes in 6 csv files related to products, sales and customers and p
 
 ## 🏁 Setup & Installation
 1. Clone the repository:
-2. In the third file, change the location of all bulk insert statements to the directory where you decide to keep the datasets.
+2. In the third file "bronze-load.sql" , change the location of all bulk insert statements to the directory where you decide to keep the datasets.
 4. Load CSV files into the SQL Server database.
 5. Execute the provided SQL scripts in numerical order to transform and load data.
 
