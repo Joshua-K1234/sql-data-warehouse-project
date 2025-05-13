@@ -4,7 +4,7 @@
 
 - Business Problem: A company needs to consolidate sales data from multiple files. It would like a modern data warehouse to store the data, the data needs to be cleaned and transformed so it is ready for analysis.
 
-- How I plan on Solving the Problem: To solve the problem I will build a datawarehouse in SQL server. It will:
+- How I plan on Solving the Problem: I will build a datawarehouse in SQL server. It will:
   - Import sales data from the sources
   - Cleanse data and solve data issues prior analysis.
 
