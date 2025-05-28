@@ -28,9 +28,6 @@ These images are for the 3rd script followed by the 5th script.
 
 <img src="https://github.com/Joshua-K1234/sql-data-warehouse-project/blob/main/images/Silver%20Layer%20Load.JPG" width="(400/9)16" height="400"/>
 
-
-## Conclusion
-
 ## 🚀 Key Features
 - Centralized Data Storage: Combines product, sales, and customer data into a unified schema.
 - Automated ETL Pipeline: Extracts, transforms, and loads data from CSVs using stored procedures.
